@@ -6,7 +6,7 @@ void board_version()
     printf("board library version = %.1f\n", BOARD_VERSION);
 }
 
-int reset_board(int _board[][BOARD_Y_SIZE])
+void reset_board(int _board[][BOARD_Y_SIZE])
 {
     for(int i = 0; i < BOARD_X_SIZE; i++)
     {
@@ -29,4 +29,16 @@ void show_board(int _board[][BOARD_Y_SIZE])
         printf("\n");
     }
     printf("\n");
+}
+
+void start_game(int _board[][BOARD_Y_SIZE])
+{
+    reset_board(_board);
+
+    for(int i = 0; i < 10; i++)
+    {   
+        system("@cls||clear");     
+        show_board(_board);   
+        usleep(300 * 1000);     
+    }
 }
