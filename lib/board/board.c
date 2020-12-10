@@ -30,15 +30,3 @@ void show_board(int _board[][BOARD_Y_SIZE])
     }
     printf("\n");
 }
-
-void start_game(int _board[][BOARD_Y_SIZE])
-{
-    reset_board(_board);
-
-    for(int i = 0; i < 10; i++)
-    {   
-        system("@cls||clear");     
-        show_board(_board);   
-        usleep(300 * 1000);     
-    }
-}

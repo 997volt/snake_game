@@ -17,7 +17,6 @@
 void board_version();
 void reset_board(int _board[][BOARD_Y_SIZE]); 
 void show_board(int _board[][BOARD_Y_SIZE]);
-void start_game(int _board[][BOARD_Y_SIZE]); 
 
 
 #endif
