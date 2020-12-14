@@ -30,3 +30,10 @@ void show_board(int _board[][BOARD_Y_SIZE])
     }
     printf("\n");
 }
+
+typedef struct
+{
+    char direction;
+    int head[2];
+    int body[BOARD_X_SIZE*BOARD_Y_SIZE][2];
+}snake;
