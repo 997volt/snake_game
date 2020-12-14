@@ -13,8 +13,8 @@ int main()
     // moves loop
     for(int i = 0; i < 10; i++)
     {
-        printf(com_read(com_handle));
-        system("@cls||clear");
+        char dir = * com_read(com_handle);
+        printf("%c\n", dir);
     }
 
     CloseHandle(com_handle);

@@ -118,5 +118,3 @@ char * com_read(HANDLE com_handle)
     return serial_buffer;
 }
 
-
-
