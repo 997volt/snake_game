@@ -31,7 +31,7 @@ void show_board(int _board[][BOARD_Y_SIZE])
     printf("\n");
 }
 
-void set_snake_direction(snake_struct * snake, char direction)
+void snake_set_direction(snake_struct * snake, char direction)
 {
     if (direction == 'U' || direction == 'D' ||direction == 'R' ||direction == 'L')
         snake->direction = direction;
@@ -43,7 +43,7 @@ void snake_init(snake_struct * snake)
     snake->head[1] = 4;
 }
 
-void move_snake_head(snake_struct * snake)
+void snake_move_head(snake_struct * snake)
 {
     switch (snake->direction)
     {
