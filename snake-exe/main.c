@@ -1,26 +1,21 @@
 #include <board/board.h>
-
+#include <port/port.h>
 
 int main()
 {
-    board_version();
-
+    // variuables setup
     int board[BOARD_X_SIZE][BOARD_Y_SIZE];
     snake_struct snake;
     HANDLE com_handle = com_open(4);
-    int message_size = 0;
 
-    reset_board(&board);
+    reset_board(board);
 
+    // moves loop
     for(int i = 0; i < 10; i++)
     {
-        char *serial_read = com_read(com_handle);
+        printf(com_read(com_handle));
         system("@cls||clear");
     }
-
-    show_board(&board);
-
-    start_game(board);
 
     CloseHandle(com_handle);
 
