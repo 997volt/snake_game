@@ -33,5 +33,6 @@ void show_board(int _board[][BOARD_Y_SIZE])
 
 void set_snake_direction(snake_struct * snake, char direction)
 {
-    snake->direction = direction;
+    if (direction == 'U' || direction == 'D' ||direction == 'R' ||direction == 'L')
+        snake->direction = direction;
 }

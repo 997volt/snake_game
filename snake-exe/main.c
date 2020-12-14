@@ -14,6 +14,7 @@ int main()
     for(int i = 0; i < 10; i++)
     {
         char dir = * com_read(com_handle);
+        set_snake_direction(&snake, dir);
         printf("%c\n", dir);
     }
 
