@@ -63,3 +63,8 @@ void snake_move_head(snake_struct * snake)
         break;
     }
 }
+
+void snake_print_head_location(snake_struct * snake)
+{
+    printf("%d  %d\n", snake->head[0], snake->head[1]);
+}
