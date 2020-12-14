@@ -18,5 +18,13 @@ void board_version();
 void reset_board(int _board[][BOARD_Y_SIZE]); 
 void show_board(int _board[][BOARD_Y_SIZE]);
 
+typedef struct
+{
+    char direction;
+    int head[2];
+    int body[BOARD_X_SIZE*BOARD_Y_SIZE][2];
+}snake_struct;
+
+void set_snake_direction(snake_struct * snake, char direction)
 
 #endif

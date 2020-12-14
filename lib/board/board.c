@@ -31,9 +31,7 @@ void show_board(int _board[][BOARD_Y_SIZE])
     printf("\n");
 }
 
-typedef struct
+void set_snake_direction(snake_struct * snake, char direction)
 {
-    char direction;
-    int head[2];
-    int body[BOARD_X_SIZE*BOARD_Y_SIZE][2];
-}snake;
+    snake->direction = direction;
+}

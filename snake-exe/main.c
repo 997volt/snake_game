@@ -6,6 +6,7 @@ int main()
     board_version();
 
     int board[BOARD_X_SIZE][BOARD_Y_SIZE];
+    snake_struct snake;
     HANDLE com_handle = com_open(4);
     int message_size = 0;
 
