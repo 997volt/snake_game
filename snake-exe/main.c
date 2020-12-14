@@ -15,10 +15,13 @@ int main()
     for(int i = 0; i < 30; i++)
     {
         char dir = * com_read(com_handle);
-        snake_set_direction(&snake, dir);
-        snake_move_head(&snake);
-        printf("%c\n", dir);
-        snake_print_head_location(&snake);
+        if(i%2 == 0)
+        {
+            snake_set_direction(&snake, dir);
+            snake_move_head(&snake);
+            printf("%c\n", dir);
+            snake_print_head_location(&snake);
+        }
     }
 
     CloseHandle(com_handle);
