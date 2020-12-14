@@ -57,10 +57,10 @@ void snake_move_head(snake_struct * snake)
         snake->head[0]--;
         break;
     case 'L':
-        snake->head[1]--;
+        snake->head[1]++;
         break;
     case 'R':
-        snake->head[1]++;
+        snake->head[1]--;
         break;     
     default:
         break;

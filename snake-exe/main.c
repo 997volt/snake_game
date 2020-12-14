@@ -19,7 +19,6 @@ int main()
         {
             snake_set_direction(&snake, dir);
             snake_move_head(&snake);
-            printf("%c\n", dir);
             show_board(&snake);
         }
     }
