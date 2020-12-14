@@ -26,5 +26,7 @@ typedef struct
 }snake_struct;
 
 void set_snake_direction(snake_struct * snake, char direction);
+void snake_init(snake_struct * snake);
+void move_snake_head(snake_struct * snake);
 
 #endif

@@ -36,3 +36,30 @@ void set_snake_direction(snake_struct * snake, char direction)
     if (direction == 'U' || direction == 'D' ||direction == 'R' ||direction == 'L')
         snake->direction = direction;
 }
+
+void snake_init(snake_struct * snake)
+{
+    snake->head[0] = 3;
+    snake->head[1] = 4;
+}
+
+void move_snake_head(snake_struct * snake)
+{
+    switch (snake->direction)
+    {
+    case 'U':
+        snake->head[0]++;
+        break;
+    case 'D':
+        snake->head[0]--;
+        break;
+    case 'L':
+        snake->head[1]--;
+        break;
+    case 'R':
+        snake->head[1]++;
+        break;     
+    default:
+        break;
+    }
+}

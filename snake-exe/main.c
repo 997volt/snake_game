@@ -9,6 +9,7 @@ int main()
     HANDLE com_handle = com_open(4);
 
     reset_board(board);
+    snake_init(&snake);
 
     // moves loop
     for(int i = 0; i < 10; i++)
