@@ -16,7 +16,7 @@
 
 void board_version();
 void reset_board(int _board[][BOARD_Y_SIZE]); 
-void show_board(int _board[][BOARD_Y_SIZE]);
+
 
 typedef struct
 {
@@ -29,5 +29,6 @@ void snake_set_direction(snake_struct * snake, char direction);
 void snake_init(snake_struct * snake);
 void snake_move_head(snake_struct * snake);
 void snake_print_head_location(snake_struct * snake);
+void show_board(snake_struct * snake);
 
 #endif

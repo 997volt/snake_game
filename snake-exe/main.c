@@ -12,7 +12,7 @@ int main()
     snake_init(&snake);
 
     // moves loop
-    for(int i = 0; i < 30; i++)
+    for(int i = 0; i < 100; i++)
     {
         char dir = * com_read(com_handle);
         if(i%2 == 0)
@@ -20,7 +20,7 @@ int main()
             snake_set_direction(&snake, dir);
             snake_move_head(&snake);
             printf("%c\n", dir);
-            snake_print_head_location(&snake);
+            show_board(&snake);
         }
     }
 

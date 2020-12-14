@@ -17,14 +17,17 @@ void reset_board(int _board[][BOARD_Y_SIZE])
     }
 }
 
-void show_board(int _board[][BOARD_Y_SIZE])
+void show_board(snake_struct * snake)
 {
     printf("\n");
     for(int i = 0; i < BOARD_X_SIZE; i++)
     {
         for(int j = 0; j < BOARD_Y_SIZE; j++)
         {
-            printf("%d ", _board[i][j]);
+            if(snake->head[0] == i && snake->head[1] == j)
+                printf("x ");
+            else
+                printf("o ");
         }
         printf("\n");
     }
