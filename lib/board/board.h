@@ -13,11 +13,6 @@
 #define BOARD_X_SIZE 10
 #define BOARD_Y_SIZE 20
 
-
-void board_version();
-void reset_board(int _board[][BOARD_Y_SIZE]); 
-
-
 typedef struct
 {
     char direction;
@@ -25,6 +20,7 @@ typedef struct
     int body[BOARD_X_SIZE*BOARD_Y_SIZE][2];
 }snake_struct;
 
+void board_version();
 void snake_set_direction(snake_struct * snake, char direction);
 void snake_init(snake_struct * snake);
 void snake_move_head(snake_struct * snake);

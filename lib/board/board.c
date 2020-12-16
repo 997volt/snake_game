@@ -6,17 +6,6 @@ void board_version()
     printf("board library version = %.1f\n", BOARD_VERSION);
 }
 
-void reset_board(int _board[][BOARD_Y_SIZE])
-{
-    for(int i = 0; i < BOARD_X_SIZE; i++)
-    {
-        for(int j = 0; j < BOARD_Y_SIZE; j++)
-        {
-            _board[i][j] = 0;
-        }
-    }
-}
-
 void show_board(snake_struct * snake)
 {
     printf("\n");

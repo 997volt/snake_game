@@ -3,12 +3,10 @@
 
 int main()
 {
-    // variuables setup
-    int board[BOARD_X_SIZE][BOARD_Y_SIZE];
+    // variables setup
     snake_struct snake;
     HANDLE com_handle = com_open(4);
 
-    reset_board(board);
     snake_init(&snake);
 
     // moves loop
