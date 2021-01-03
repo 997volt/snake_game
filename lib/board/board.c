@@ -1,5 +1,6 @@
 #include "board.h"
 #include <stdio.h>
+#include <time.h>
 
 void board_version()
 {
@@ -14,7 +15,9 @@ void show_board(snake_struct * snake)
         for(int j = 0; j < BOARD_Y_SIZE; j++)
         {
             if(snake->head[0] == i && snake->head[1] == j)
-                printf("x ");
+                printf("X ");
+            else if(snake->food[0] == i && snake->food[1] == j)
+                printf("@ ");
             else
                 printf("o ");
         }
@@ -33,6 +36,7 @@ void snake_init(snake_struct * snake)
 {
     snake->head[0] = 3;
     snake->head[1] = 4;
+    food_generate_new(snake);
 }
 
 void snake_move_head(snake_struct * snake)
@@ -70,4 +74,15 @@ BOOL snake_check_wall_collision(snake_struct * snake)
     }
 
     return FALSE;
+}
+
+void food_generate_new(snake_struct * snake)
+{
+    while(TRUE)
+    {
+        snake->food[0] = rand()%BOARD_X_SIZE;
+        snake->food[1] = rand()%BOARD_Y_SIZE;
+
+        if(snake->food[0] != snake->head[0] && snake->food[1] != snake->head[1]) break;
+    }
 }

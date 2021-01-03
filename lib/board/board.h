@@ -10,8 +10,8 @@
 #endif
 
 
-#define BOARD_X_SIZE 10
-#define BOARD_Y_SIZE 20
+#define BOARD_X_SIZE 5
+#define BOARD_Y_SIZE 5
 
 typedef struct
 {
@@ -19,7 +19,9 @@ typedef struct
     int head[2];
     int body[BOARD_X_SIZE*BOARD_Y_SIZE][2];
     int size;
+    int food[2];
 }snake_struct;
+
 
 void board_version();
 void snake_set_direction(snake_struct * snake, char direction);
@@ -28,5 +30,6 @@ void snake_move_head(snake_struct * snake);
 void snake_print_head_location(snake_struct * snake);
 void show_board(snake_struct * snake);
 BOOL snake_check_wall_collision(snake_struct * snake);
+void food_generate_new(snake_struct * snake);
 
 #endif
