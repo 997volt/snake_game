@@ -60,3 +60,14 @@ void snake_print_head_location(snake_struct * snake)
 {
     printf("%d  %d\n", snake->head[0], snake->head[1]);
 }
+
+BOOL snake_check_wall_collision(snake_struct * snake)
+{
+    if(snake->head[0] < 0 || snake->head[0] >= BOARD_X_SIZE || snake->head[1] < 0  || snake->head[1] >= BOARD_Y_SIZE )
+    {
+        printf("wall collision detected at head (%d,%d)", snake->head[0], snake->head[1]);
+        return TRUE;
+    }
+
+    return FALSE;
+}

@@ -18,6 +18,7 @@ typedef struct
     char direction;
     int head[2];
     int body[BOARD_X_SIZE*BOARD_Y_SIZE][2];
+    int size;
 }snake_struct;
 
 void board_version();
@@ -26,5 +27,6 @@ void snake_init(snake_struct * snake);
 void snake_move_head(snake_struct * snake);
 void snake_print_head_location(snake_struct * snake);
 void show_board(snake_struct * snake);
+BOOL snake_check_wall_collision(snake_struct * snake);
 
 #endif
