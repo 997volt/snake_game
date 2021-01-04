@@ -31,5 +31,6 @@ void snake_print_head_location(snake_struct * snake);
 void show_board(snake_struct * snake);
 BOOL snake_check_wall_collision(snake_struct * snake);
 void food_generate_new(snake_struct * snake);
+void snake_check_food(snake_struct * snake);
 
 #endif

@@ -34,8 +34,8 @@ void snake_set_direction(snake_struct * snake, char direction)
 
 void snake_init(snake_struct * snake)
 {
-    snake->head[0] = 3;
-    snake->head[1] = 4;
+    snake->head[0] = 0;
+    snake->head[1] = 0;
     food_generate_new(snake);
 }
 
@@ -85,4 +85,14 @@ void food_generate_new(snake_struct * snake)
 
         if(snake->food[0] != snake->head[0] && snake->food[1] != snake->head[1]) break;
     }
+}
+
+void snake_check_food(snake_struct * snake)
+{
+    if(snake->head[0] == snake->food[0] && snake->head[1] == snake->food[1])
+    {
+        snake->size++;
+        food_generate_new(snake);
+        printf("snake size = %d", snake->size);
+    }    
 }

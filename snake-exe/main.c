@@ -5,7 +5,7 @@ int main()
 {
     // variables setup
     snake_struct snake;
-    HANDLE com_handle = com_open(5);
+    HANDLE com_handle = com_open(4);
     srand(time(NULL));
     snake_init(&snake);
 
@@ -17,8 +17,9 @@ int main()
         {
             snake_set_direction(&snake, dir);
             snake_move_head(&snake);
-            show_board(&snake);
             if(snake_check_wall_collision(&snake)) break;
+            snake_check_food(&snake);
+            show_board(&snake);
         }        
     }
 
